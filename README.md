@@ -1,0 +1,44 @@
+# 김태현 · 게임 클라이언트 포트폴리오
+
+밝은 배경과 파란 포인트, 카드형 타임라인으로 구성한 개인 포트폴리오입니다.
+
+**사이트:** [akdl6632.github.io](https://akdl6632.github.io/)
+
+## 구성
+
+- 소개 및 학력·기술 스택
+- 프로젝트 타임라인
+- DirectX 12 슈팅 게임, Snow Brothers 모작, 꽃가루 검색 프로그램
+- 플레이 시연 영상과 PDF
+- 이메일 및 GitHub 연락처
+
+졸업작품은 **미완성**, 학적은 **마지막 학기 재학 중**으로 표기합니다. 정확한 졸업예정 연월은 학교에서 확인한 뒤 추가합니다. 확인되지 않은 수치, 자격증, 수상·경력은 넣지 않았습니다. 프로젝트별 소스 저장소는 정확한 주소가 확인되면 추가합니다.
+
+## 실행
+
+Node.js 24 이상, pnpm 11.19.0 기준입니다.
+
+```bash
+pnpm install --frozen-lockfile --ignore-scripts
+pnpm dev
+pnpm build
+```
+
+## 수정 위치
+
+| 내용 | 파일 |
+| --- | --- |
+| 소개, 학력, 프로젝트, 연락처 | `app/page.tsx` |
+| 색상, 글꼴, 간격, 모바일 레이아웃 | `app/globals.css` |
+| 사이트 제목·검색 설명 | `app/layout.tsx` |
+| 대표 이미지 | `public/images/` |
+| DirectX 시연 영상 | `public/videos/directx-demo.mp4` |
+| 포트폴리오 PDF | `public/portfolio.pdf` |
+
+## 배포
+
+GitHub Pages의 배포 소스를 **GitHub Actions**로 설정합니다. `main` 브랜치에 변경을 푸시하면 정적 사이트를 빌드하고 배포합니다.
+
+## 자료와 권리
+
+프로젝트 설명과 이미지는 본인 제공 PPT를 기반으로 작성했습니다. Snow Brothers는 학습 목적의 모작이며, 원작과 사용 에셋의 권리는 각 권리자에게 있습니다. 다른 프로젝트의 외부 에셋도 원 권리자의 조건을 따릅니다.
