@@ -5,6 +5,7 @@ import {
   CodeXml as Github,
   Mail,
 } from 'lucide-react';
+import { ProjectDetailDialog } from './project-detail-dialog';
 
 const timeline = [
   {
@@ -29,7 +30,7 @@ const timeline = [
     number: '03',
     date: '2024.01 — 2024.05',
     title: '은밀하게 위대하게',
-    type: '3인 팀 · 졸업작품',
+    type: '3인 팀 프로젝트',
     description:
       'DirectX 12 슈팅 게임에서 플레이어 이동, 발사와 충돌 처리를 담당했습니다.',
     href: '#directx',
@@ -38,7 +39,7 @@ const timeline = [
     number: '04',
     date: '2026.05 — 2026.08',
     title: 'Wanted',
-    type: '3인 팀 · 자체 엔진',
+    type: '2인 팀 · 졸업작품',
     description:
       'DirectX 11 기반 자체 엔진에서 전투, 애니메이션과 도탄·관통 시스템을 구현했습니다.',
     href: '#wanted',
@@ -127,8 +128,8 @@ export default function Home() {
             aria-label="Wanted 프로젝트 자세히 보기"
           >
             <div className="hero-project-top">
-              <span className="eyebrow">FEATURED PROJECT</span>
-              <span className="quiet-pill">2026.08</span>
+              <span className="eyebrow">GRADUATION PROJECT</span>
+              <span className="quiet-pill">졸업작품</span>
             </div>
             <div className="hero-visual">
               <img
@@ -142,7 +143,7 @@ export default function Home() {
             </div>
             <div className="hero-project-bottom">
               <div>
-                <span className="small-label">TACTICAL FPS · TEAM 03</span>
+                <span className="small-label">TACTICAL FPS · TEAM 02</span>
                 <h2>Wanted</h2>
               </div>
               <span className="round-arrow">
@@ -242,7 +243,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">02 / SELECTED WORK</p>
               <h2 id="projects-title">
-                직접 만든 것들<span className="count">04</span>
+                주요 프로젝트<span className="count">04</span>
               </h2>
             </div>
             <p className="section-intro">
@@ -276,8 +277,8 @@ export default function Home() {
             </div>
             <div className="featured-copy">
               <div className="project-kicker">
-                <span className="eyebrow">FEATURED PROJECT</span>
-                <span className="quiet-pill">2026.08</span>
+                <span className="eyebrow">GRADUATION PROJECT</span>
+                <span className="quiet-pill">졸업작품</span>
               </div>
               <h3>Wanted</h3>
               <p className="project-subtitle">
@@ -286,7 +287,7 @@ export default function Home() {
               <div className="project-tags">
                 <span>DirectX 11</span>
                 <span>Custom Engine</span>
-                <span>3인 팀</span>
+                <span>2인 팀</span>
               </div>
               <dl className="project-facts">
                 <div>
@@ -305,8 +306,10 @@ export default function Home() {
                 </div>
               </dl>
               <p className="scope-note">
-                직접 구현한 엔진 런타임, 탄도, 에디터 시스템을 중심으로 정리했습니다.
+                직접 구현한 엔진 런타임, 탄도, 에디터 시스템을 중심으로
+                정리했습니다.
               </p>
+              <ProjectDetailDialog project="wanted" />
             </div>
           </article>
           <article id="directx" className="featured-project legacy-project">
@@ -331,14 +334,14 @@ export default function Home() {
             </div>
             <div className="featured-copy">
               <div className="project-kicker">
-                <span className="eyebrow">GRADUATION PROJECT</span>
-                <span className="quiet-pill">졸업작품</span>
+                <span className="eyebrow">TEAM PROJECT</span>
+                <span className="quiet-pill">팀 프로젝트</span>
               </div>
               <h3>은밀하게 위대하게</h3>
               <p className="project-subtitle">DirectX 12 기반 3D 슈팅 게임</p>
               <div className="project-tags">
                 <span>DirectX 12</span>
-                <span>졸업작품</span>
+                <span>팀 프로젝트</span>
                 <span>3인 팀</span>
               </div>
               <dl className="project-facts">
@@ -356,8 +359,9 @@ export default function Home() {
                 </div>
               </dl>
               <p className="scope-note">
-                졸업작품에서 직접 구현한 핵심 플레이 기능을 소개합니다.
+                팀 프로젝트에서 직접 구현한 핵심 플레이 기능을 소개합니다.
               </p>
+              <ProjectDetailDialog project="directx" />
             </div>
           </article>
           <div className="secondary-projects">
@@ -392,6 +396,7 @@ export default function Home() {
                   학습 목적의 모작입니다. 원작 및 에셋의 권리는 각 권리자에게
                   있습니다.
                 </p>
+                <ProjectDetailDialog project="snow" />
               </div>
             </article>
             <article id="pollen" className="project-card">
@@ -429,22 +434,16 @@ export default function Home() {
                   <li>지도 및 나무 이미지 표시</li>
                   <li>Python 기반 데스크톱 UI</li>
                 </ul>
+                <ProjectDetailDialog project="pollen" />
               </div>
             </article>
           </div>
           <div className="project-footer">
             <p>
-              자세한 프로젝트 소개는 최신 포트폴리오에서 확인할 수 있습니다.
+              프로젝트 카드의 자세히 보기에서 구현 범위와 기술 정보를 확인할 수
+              있습니다.
             </p>
-            <a
-              className="text-link"
-              href="/portfolio-wanted.pptx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              포트폴리오 PPTX 열기
-              <ArrowUpRight size={17} aria-hidden="true" />
-            </a>
+            <ProjectDetailDialog project="wanted" compact />
           </div>
         </section>
 
