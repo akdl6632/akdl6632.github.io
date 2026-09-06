@@ -43,6 +43,8 @@ for (const asset of [
   'portfolio-wanted.pptx',
   'images/wanted-gameplay.webp',
   'images/wanted-first-person.webp',
+  'images/directx-poster.webp',
+  'videos/directx-demo.mp4',
   'images/snow-brothers.webp',
   'images/pollen-search.webp',
 ]) {

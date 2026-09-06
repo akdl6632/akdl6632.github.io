@@ -27,11 +27,20 @@ const timeline = [
   },
   {
     number: '03',
-    date: '2024.01 — 진행 중',
+    date: '2024.01 — 2024.05',
+    title: '은밀하게 위대하게',
+    type: '3인 팀 · 졸업작품',
+    description:
+      'DirectX 12 슈팅 게임에서 플레이어 이동, 발사와 충돌 처리를 담당했습니다.',
+    href: '#directx',
+  },
+  {
+    number: '04',
+    date: '2026.05 — 진행 중',
     title: 'Wanted',
     type: '3인 팀 · 자체 엔진',
     description:
-      'DirectX 11 기반 엔진에서 전투, 애니메이션, 탄도와 복셀 파괴 시스템을 구현했습니다.',
+      'DirectX 11 기반 자체 엔진에서 전투, 애니메이션과 도탄·관통 시스템을 구현하고 있습니다.',
     href: '#wanted',
   },
 ];
@@ -178,7 +187,7 @@ export default function Home() {
             <div className="profile-cell">
               <p className="eyebrow">TECH STACK</p>
               <div className="stack-list">
-                {['C / C++', 'DirectX 11', 'Custom Engine', 'Python'].map(
+                {['C / C++', 'DirectX 11 / 12', 'Custom Engine', 'Python'].map(
                   (stack) => (
                     <span key={stack}>{stack}</span>
                   ),
@@ -221,7 +230,7 @@ export default function Home() {
           <div className="next-chapter">
             <span className="eyebrow">NOW BUILDING</span>
             <p>
-              <strong>Wanted</strong> 전투 감각·탄도·파괴 표현 고도화
+              <strong>Wanted</strong> 전투 감각·애니메이션·탄도 시스템 고도화
             </p>
             <span className="planned-pill">진행 중</span>
           </div>
@@ -236,7 +245,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">02 / SELECTED WORK</p>
               <h2 id="projects-title">
-                직접 만든 것들<span className="count">03</span>
+                직접 만든 것들<span className="count">04</span>
               </h2>
             </div>
             <p className="section-intro">
@@ -288,7 +297,7 @@ export default function Home() {
               <dl className="project-facts">
                 <div>
                   <dt>기간</dt>
-                  <dd>2024.01 — 진행 중</dd>
+                  <dd>2026.05 — 진행 중</dd>
                 </div>
                 <div>
                   <dt>구현</dt>
@@ -297,12 +306,63 @@ export default function Home() {
                     <br />
                     캐릭터 애니메이션·조준 시스템
                     <br />
-                    도탄·관통·복셀 파괴 표현
+                    도탄·관통 시뮬레이션
                   </dd>
                 </div>
               </dl>
               <p className="scope-note">
-                현재 구현한 플레이, 탄도, 파괴 시스템을 중심으로 정리했습니다.
+                현재 구현한 플레이, 탄도, 에디터 시스템을 중심으로 정리했습니다.
+              </p>
+            </div>
+          </article>
+          <article id="directx" className="featured-project legacy-project">
+            <div className="featured-media">
+              <video
+                controls
+                preload="none"
+                playsInline
+                poster="/images/directx-poster.webp"
+                width="1280"
+                height="720"
+                aria-label="은밀하게 위대하게 이동 및 사격 시연 영상"
+              >
+                <source src="/videos/directx-demo.mp4" type="video/mp4" />
+                동영상 재생을 지원하지 않는 브라우저입니다.{' '}
+                <a href="/videos/directx-demo.mp4">시연 영상 다운로드</a>
+              </video>
+              <div className="media-caption">
+                <span>02 / PLAYABLE SYSTEMS</span>
+                <span>플레이어 이동 · 사격 시연</span>
+              </div>
+            </div>
+            <div className="featured-copy">
+              <div className="project-kicker">
+                <span className="eyebrow">GRADUATION PROJECT</span>
+                <span className="quiet-pill">졸업작품</span>
+              </div>
+              <h3>은밀하게 위대하게</h3>
+              <p className="project-subtitle">DirectX 12 기반 3D 슈팅 게임</p>
+              <div className="project-tags">
+                <span>DirectX 12</span>
+                <span>졸업작품</span>
+                <span>3인 팀</span>
+              </div>
+              <dl className="project-facts">
+                <div>
+                  <dt>기간</dt>
+                  <dd>2024.01 — 2024.05</dd>
+                </div>
+                <div>
+                  <dt>담당</dt>
+                  <dd>
+                    플레이어 이동과 총알 발사
+                    <br />
+                    플레이어·투사체와 오브젝트 충돌 처리
+                  </dd>
+                </div>
+              </dl>
+              <p className="scope-note">
+                졸업작품에서 직접 구현한 핵심 플레이 기능을 소개합니다.
               </p>
             </div>
           </article>
@@ -319,7 +379,7 @@ export default function Home() {
               </div>
               <div className="project-card-body">
                 <div className="project-kicker">
-                  <span className="eyebrow">02 / GAME PROJECT</span>
+                  <span className="eyebrow">03 / GAME PROJECT</span>
                   <span className="quiet-pill">학부 개인 프로젝트</span>
                 </div>
                 <h3>Snow Brothers 모작</h3>
@@ -360,7 +420,7 @@ export default function Home() {
               </div>
               <div className="project-card-body">
                 <div className="project-kicker">
-                  <span className="eyebrow">03 / OTHER PROJECT</span>
+                  <span className="eyebrow">04 / OTHER PROJECT</span>
                   <span className="quiet-pill">학부 팀 프로젝트</span>
                 </div>
                 <h3>지역별 꽃가루 검색</h3>
