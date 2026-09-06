@@ -247,9 +247,9 @@ export default function Home() {
               </h2>
             </div>
             <p className="section-intro">
-              프로젝트의 규모보다,
+              프로젝트의 크기보다,
               <br />
-              직접 구현한 범위가 보이도록.
+              구현의 깊이에 집중했습니다.
             </p>
           </div>
           <article id="wanted" className="featured-project">
