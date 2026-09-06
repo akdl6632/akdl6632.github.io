@@ -870,10 +870,14 @@ p {
   border-top: 0;
 }
 .project-detail-dialog {
+  position: fixed;
+  inset: 50% auto auto 50%;
   width: min(1120px, calc(100vw - 40px));
   max-width: none;
   max-height: min(92vh, 960px);
+  margin: 0;
   padding: 0;
+  transform: translate(-50%, -50%);
   color: var(--foreground);
   background: transparent;
   border: 0;
