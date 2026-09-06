@@ -36,11 +36,11 @@ const timeline = [
   },
   {
     number: '04',
-    date: '2026.05 — 진행 중',
+    date: '2026.05 — 2026.08',
     title: 'Wanted',
     type: '3인 팀 · 자체 엔진',
     description:
-      'DirectX 11 기반 자체 엔진에서 전투, 애니메이션과 도탄·관통 시스템을 구현하고 있습니다.',
+      'DirectX 11 기반 자체 엔진에서 전투, 애니메이션과 도탄·관통 시스템을 구현했습니다.',
     href: '#wanted',
   },
 ];
@@ -128,17 +128,14 @@ export default function Home() {
           >
             <div className="hero-project-top">
               <span className="eyebrow">FEATURED PROJECT</span>
-              <span className="live-pill">
-                <span />
-                개발 중
-              </span>
+              <span className="quiet-pill">2026.08</span>
             </div>
             <div className="hero-visual">
               <img
-                src="/images/wanted-gameplay.webp"
-                alt="Wanted 전술 전투 플레이 화면"
-                width="1280"
-                height="720"
+                src="/images/wanted-engine-editor.png"
+                alt="Wanted 자체 엔진의 맵 편집 카메라와 실시간 성능 지표"
+                width="1920"
+                height="1080"
                 fetchPriority="high"
               />
               <span className="image-corner">DX11 / CUSTOM ENGINE</span>
@@ -228,11 +225,11 @@ export default function Home() {
             ))}
           </div>
           <div className="next-chapter">
-            <span className="eyebrow">NOW BUILDING</span>
+            <span className="eyebrow">LATEST PROJECT</span>
             <p>
-              <strong>Wanted</strong> 전투 감각·애니메이션·탄도 시스템 고도화
+              <strong>Wanted</strong> 자체 엔진·애니메이션·탄도 시스템 구현
             </p>
-            <span className="planned-pill">진행 중</span>
+            <span className="planned-pill">2026.08</span>
           </div>
         </section>
 
@@ -258,32 +255,29 @@ export default function Home() {
             <div className="featured-media">
               <div className="featured-gallery">
                 <img
-                  src="/images/wanted-gameplay.webp"
-                  alt="Wanted의 3인칭 전투와 적 캐릭터 상호작용 화면"
-                  width="1280"
-                  height="720"
+                  src="/images/wanted-engine-editor.png"
+                  alt="Wanted 자체 엔진의 맵 편집 카메라와 실시간 성능 지표"
+                  width="1920"
+                  height="1080"
                   loading="lazy"
                 />
                 <img
-                  src="/images/wanted-first-person.webp"
-                  alt="Wanted의 1인칭 스코프 조준 화면"
-                  width="1280"
-                  height="720"
+                  src="/images/wanted-engine-ballistics.png"
+                  alt="Wanted 도탄 시뮬레이션과 Ballistics Inspector 편집 화면"
+                  width="1920"
+                  height="1080"
                   loading="lazy"
                 />
               </div>
               <div className="media-caption">
-                <span>01 / PLAYABLE SYSTEMS</span>
-                <span>3인칭 전투 · 1인칭 조준</span>
+                <span>01 / CUSTOM ENGINE</span>
+                <span>맵 편집 · 성능 지표 · 도탄 시뮬레이션</span>
               </div>
             </div>
             <div className="featured-copy">
               <div className="project-kicker">
                 <span className="eyebrow">FEATURED PROJECT</span>
-                <span className="live-pill">
-                  <span />
-                  개발 중
-                </span>
+                <span className="quiet-pill">2026.08</span>
               </div>
               <h3>Wanted</h3>
               <p className="project-subtitle">
@@ -297,7 +291,7 @@ export default function Home() {
               <dl className="project-facts">
                 <div>
                   <dt>기간</dt>
-                  <dd>2026.05 — 진행 중</dd>
+                  <dd>2026.05 — 2026.08</dd>
                 </div>
                 <div>
                   <dt>구현</dt>
@@ -311,7 +305,7 @@ export default function Home() {
                 </div>
               </dl>
               <p className="scope-note">
-                현재 구현한 플레이, 탄도, 에디터 시스템을 중심으로 정리했습니다.
+                직접 구현한 엔진 런타임, 탄도, 에디터 시스템을 중심으로 정리했습니다.
               </p>
             </div>
           </article>

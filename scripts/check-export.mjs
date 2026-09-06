@@ -41,8 +41,8 @@ for (const [, raw] of html.matchAll(/\b(?:src|href|poster)="([^"]+)"/g)) {
 
 for (const asset of [
   'portfolio-wanted.pptx',
-  'images/wanted-gameplay.webp',
-  'images/wanted-first-person.webp',
+  'images/wanted-engine-editor.png',
+  'images/wanted-engine-ballistics.png',
   'images/directx-poster.webp',
   'videos/directx-demo.mp4',
   'images/snow-brothers.webp',
